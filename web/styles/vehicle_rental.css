@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 31, 2022, 10:38:05 AM
+    Author     : Kirk Herbison
+*/
+form{
+    flex-basis: 90%;
+    padding-bottom: 4.5%;
+    padding-top: 3%;
+}
+form label{
+    font-size: 110%;
+}
+#creditCardTypes{
+    margin: 0;
+}
+
+fieldset input[type="text"]{
+    font-size: 130%;
+    width: 43%;
+}
+/*fieldset style*/
+fieldset{
+    margin-bottom: 2em;
+    width: 48%;
+    display: flex;
+    margin-right: 1%;
+    flex-direction: column;
+    float: left;
+    height: 320px;
+}
+
+fieldset legend{
+  background-color: darkslateblue;
+  color: white;
+  padding: 5px 10px; 
+  margin-bottom: .75em;
+}
+
+fieldset div{
+    padding-left: .5em;
+    display: inline;
+    
+}
+.user_input{
+    flex-direction: row;
+    margin-bottom: .2em;
+}
+
+.user_input label{
+    width: 40%;
+    float: left;
+    text-align: right;
+    padding-right: .4em;
+    font-weight: bold;
+    
+/*    margin-right: 20px;*/
+}
+
+select{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 120%;
+}
+
+.input_group{
+    margin-left: 0;
+    padding-left: 0;
+    /*flex-direction: row;*/
+}
+
+/*input style*/
+
+input{
+    margin-left: 0;
+    width: 30%;
+    
+}
+
+select{
+    font-size: 130%;
+    width: 43.8%;
+}
+
+input[type="submit"]{
+    margin-top: 5px;
+    background-color: wheat;
+    font-size: 20px;
+    width: 43.8%;
+    margin-left: 9.4em;
+}
+
+
+textarea{
+    resize: none;
+    width: 98%;
+    font-size: 150%;
+    
+}
+
+.error_message{
+    text-align: left;
+    margin-left: 10px;
+    height: auto;
+    margin: 0;
+}
+
+@media only screen and (max-width: 479px) {
+.user_input{
+    flex-basis: 100%;
+    width:99%;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.input_group{
+    width: 100%;
+}
+
+.user_input label{
+    width: 100%;
+    text-align: left;    
+}
+
+fieldset{
+    height: auto;
+    width: 100%;
+}
+
+fieldset input[type=text]{
+    width: 80%;
+    margin-top: 5px;
+}
+
+fieldset input[type=submit]{
+    width: 80%;
+    margin-top: 5px;
+    height: 50px;
+    margin-left: 0;
+    margin-bottom: 1em;
+}
+
+fieldset input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+}
+
+.error_message{
+    margin-left: 0;
+    width: auto;
+}
+
+input[type="password"]{
+    font-size: 130%;
+    width: 80%;
+}
+
+}

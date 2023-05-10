@@ -1,0 +1,212 @@
+
+=========================Fixes For Asg 5=========================
+1) added the "secure" to the filter
+
+-------------------------Feedback Asg 5-------------------------
+Kirk, thanks for you feedback on sendRedirect() vs forward(). I truly was on the 
+fence and wanted to hear from students. In LoginFilter, add an or path contains 
+"secure". I could get to the index.jsp by typing secure/ 
+
+=========================Fixes For Asg 4=========================
+1) removed the generated RETURN_GENERATED_KEYS from updateEndUser
+
+-------------------------Feedback Asg 4-------------------------
+Kirk, in EndUserDb | updateEndUser, you get the RETURN_GENERATED_KEYS. A key is only
+generated during an insert, so that part of the prepareStatement is not necessary. Nice job.
+
+=========================Fixes For Asg 3=========================
+1) changed c:if in vehicle_rental to ternary operator
+2) updated css for cc number
+3) changed email so it saves as null in the database
+4) I assume you were refering to my credit card types select when talking about 
+    my database. I changed that to something similar to your video.
+
+-------------------------Feedback Asg 3-------------------------
+Kirk, you should be holding state on your vehicle_rental, not by using c:if,
+but by using a ternary operator.
+
+You code is very dependent on the database staying
+the same, including no cards being added. Review my selection option video and update
+your code, please.
+
+Make your inputs for CC a bit longer. I cannot see the entire CC number.
+
+Remember to send null to the database when there is no email. I set email = null
+when creating my end-user and that is what get sent to the database.
+
+=========================Fixes For Asg 2=========================
+worked on css
+
+-------------------------Feedback Asg 2-------------------------
+Kirk, works great. You have lots of whitespace which makes your pages longer
+than they need to be. Work on your CSS.
+
+=========================Fixes For Asg 1=========================
+none, thanks.
+
+-------------------------Feedback Asg 1-------------------------
+Kirk, sorry it took so long to grade. You did a fantastic job. Everything
+worked great
+
+=========================Fixes For Asg 6=========================
+none, thanks.
+
+-------------------------Feedback Asg 6-------------------------
+Kirk, nicely done.
+
+=========================Fixes For Asg 5=========================
+//to do
+1) added A04 feedback, I forgot to add it even though I did it
+2) added comments
+
+-------------------------Feedback Asg 5-------------------------
+Kirk, what happened to A04 feedback? Make sure you have significant, detailed,
+and meaningful comment in the next assignment. I should be able to tell
+"who, what, when, where, and why" from your comments. The comments should give
+me a clear indication of the flow of your application.
+=========================Fixes For Asg 4=========================
+//to do
+1) The selected vehicle now holds state if the dates do not validate
+2) If no email on file results.jsp states it is not on file
+
+
+-------------------------Feedback Asg 4-------------------------
+Kirk, vehicles.jsp does not show any errors for me. I have Windows 10, NetBeans 14.
+Hold the state of the selected vehicle even if the dates do not validate.
+I do not see where you put radioValue and vehicleId as keys into session during
+the validation process.
+
+Remember, if there is no email, then results.jsp should state that it is not on file.
+
+=========================Fixes For Asg 3=========================
+//to do
+1) The vehicle radio buttons now save state. I do this after validating a
+selection has been made
+2) The email now shows "no email on record" if there is no email for the customer
+3) The dates now hold session as well
+
+
+-------------------------Feedback Asg 3-------------------------
+Kirk, vehicles.jsp does not show any errors for me. I have Windows 10,
+NetBeans 14. Hold the state of the selected vehicle even if the dates do not validate.
+I do not see where you put radioValue and vehicleId as keys into session during
+the validation process.
+
+Remember, if there is no email, then results.jsp should state
+that it is not on file.
+
+=========================Fixes For Asg 2=========================
+
+=========================Fixes For Asg 3=========================
+I added slick nav which fixed the results.jsp having no white space.
+I believe the register page should be sending null to the database now if the
+email is empty. I made a change on line 60 of HelperCustomer
+
+-------------------------Feedback Asg 3-------------------------
+Kirk, on results.jsp add some whitespace above the fieldset. The legend is crowding
+the nav. Send null to the database if there is no email address. Nice job.
+
+=========================Fixes For Asg 2=========================
+
+1) I changed my items in vehicles.jsp table to items="${vehicleTypes}" (thanks tomcat)
+2)cchanged costPerDay to be BigDecimal in the class
+3)got rid of getErrorMessage() in the Customer class
+4)got rid of the constructor in the Static classes
+5)changed helperFormDisplays to customerDisplay and put it inside HelperCustomer
+6)made formatPhone() more generic and created a generic formatDate()
+
+-------------------------Feedback Asg 2-------------------------
+
+Kirk, I do not get any vehicle data in the table with the way you defined items=. 
+All you needed to do was to reference the map same as you do an arraylist:
+
+items="${vehicleTypes}"
+
+Java "opens" up the map for you. Let's look at it together on Thursday.
+
+The variable costPerDay should be of type BigDecimal in the class. You bring it in 
+as BigDecimal but the class converts/saves it as a string. I have an additional getter 
+for getFormattedCost(). 
+
+You have a getErrorMessage() in the Customer class. Two things, first, you are not 
+using it. And second, the error message does not belong to an instance of the customer 
+object, so the class should not contain the error message getter. It is more information 
+for the customer.
+
+Anytime you have a static method within a class, you should NOT have a constructor 
+in the class. My guess is that your template includes the constructor whenever a 
+class is created. So does mine and I take it out for the static methods. 
+
+I would argue that the helperFormDisplays should be renamed and put into a HelperCustomer 
+class. Everything in it is about the customer.
+
+Make your formatPhone() more generic by passing in the phone number you want to format. 
+Yours only works with the parameter "customerPhone".
+
+formatDisplay() should not be multi-purpose. Instead have a formatDate() and as 
+I already mentioned, change formatPhone(). 
+
+I like your getCustomer() method in HelperCustomer. 
+
+=========================Fixes For Asg 1=========================
+
+1) fixed the "field can be final" warning by removing the contents of the
+    no-argument constructor
+2) refactored UnitType to VehicleType and added a no-argument constructor
+3) I added session storage for the form
+4) I added the required attribute to the required fields
+5) to answer your question about the Form, I do not need results to be in a form
+    because I am not doing any actions.
+6) fixed a method name to be camel case (If I missed any let me know please)
+7) I deleted unit_list.jsp and convert.jsp
+8) changed HelperFormDisplays to only contain formating
+9) changed the vehicles page to display NumberFormat
+10) added the customer ID and date to the verification page
+11) fixed the css for the verification page
+12) changed the footer of results.jsp to say results.jsp
+
+13) I got rid of some of my initializations because the project is showing a "!"
+    error and I can't find out why. I'm also getting an error saying the "html
+    version of the code cannot be determined" that I can't find a fix for.
+
+-------------------------Feedback Asg 1-------------------------
+
+Feedback to Learner
+9/20/22 12:00 PM
+Kirk, to get rid of the "field can be final" warnings in your Customer JavaBean,
+remove the contents of your no-argument constructor and either leave it empty or
+replace is with a "this" call. 
+
+One of the requirements for something being a JavaBean is that it contains a no-argument
+constructor. You need to add one to UnitType. Also, refactor that name. It is a type of vehicle.
+
+You are not holding state if your form does not validate. Look at your validateCustomerInformation()
+method. You only say what should happen if the items do not validate, never what
+to do if they do validate.
+
+Remember, best practice is to use the required attribute and the asterisk. Remember
+to update the footer information on each page. Your results page is listed as register.
+
+Speaking of results, your page needs lots of help with the CSS. Remember, a paragraph
+element is block by default, whereas a span is inline. Also, it could have something
+to do with you reference convert.css, yet that file is not found. Also check the elements
+on that page. You never close the fieldset. In reality, results.jsp does not need to have
+the form element. Do you know why?
+
+You should not have unused code. In this case I am referring to unit_list.jsp and
+convert.jsp. To avoid needlessly loosing points, please re-read (including the linked PDF)
+and adhere to my Assignment Purpose & Rubric, which can be found in each assignment folder.
+You should not have unused imports and commented out code (there is an exception to commented
+out code).
+
+The creating of the customer object should be in the HelperCustomer class, not the
+HelperFormDisplays. That class is used for formatting data for display. Furthermore,
+you should use camel case for method names. My HelperFormDisplays has a static method
+named displayFormattedPhone().
+
+Also, do not mix Boolean (used in Customer class) and boolean (used in HelperFormDisplays). 
+
+On the page that list the vehicles, you should have displayed the cost in currency format.
+Remember, I have a video on NumberFormat.
+
+I am being generous on this first assignment. 

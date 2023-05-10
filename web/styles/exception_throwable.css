@@ -1,0 +1,22 @@
+main{
+    margin-top: 2em;
+}
+main h1 {
+    font-size: 250%;
+    background-color: rgba(75,0,130,.3);
+    padding-left: 10px;
+    margin-bottom: .5em;
+}
+main h3{
+    font-size: 150%;
+    background-color: rgba(75,0,130,.3);
+    padding-left: 10px;
+    margin-bottom: .5em;
+}
+
+main p{
+    font-size: 110%;
+            word-wrap: break-word;
+        word-break: break-all;
+        margin-bottom: 5px;
+}

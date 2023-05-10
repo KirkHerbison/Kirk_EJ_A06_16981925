@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 31, 2022, 10:39:11 AM
+    Author     : Kirk Herbison
+*/
+
+main{
+    margin-top: 2em;
+}
+main h1 {
+    font-size: 250%;
+    background-color: rgba(75,0,130,.3);
+    padding-left: 10px;
+    margin-bottom: .5em;
+}
+
+main p{
+    font-size: 110%;
+            word-wrap: break-word;
+        word-break: break-all;
+        margin-bottom: 5px;
+}
